@@ -1,8 +1,4 @@
 
-// Imports
-
-@use 'variables' as *;
-
 
 // mixins
 
@@ -31,22 +27,22 @@
   grid-column-end: $column-end;
 }
 
-@mixin divider($color: $pick-a-color){
+@mixin divider($color: $text-light){
   border-top: 2px solid $color;
   margin-top: 1em;
   padding-top: 1.5em;
 }
 
+@mixin add-border($width: 2px, $style: solid, $color: $primary){
+  border: $width $style $color
+}
 
 // Zen element styles.
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4, h5, h6{
   font-family: $fonts-headline;
   margin: 0;
-  color: $pick_a_color;
+  color: $primary;
   margin-bottom: 1em;
   padding: .5em 1em;
   display: inline-block;
@@ -60,11 +56,11 @@ p {
 }
 
 a {
-  border-bottom: 1px solid $pick_a_color;
-  color: $pick_a_color;
+  color: $text-light;
   text-decoration: none;
   transition: border-color 0.2s ease-in-out;
   &:hover{
-    border-color: $pick_a_color;
+    color: $accent2;
   }
 }
+
