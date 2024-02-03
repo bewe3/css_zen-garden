@@ -1,0 +1,70 @@
+
+// Imports
+
+@use 'variables' as *;
+
+
+// mixins
+
+@mixin set-font($size: 1em, $line-height: normal, $font: $fonts-body) {
+  font-family: $font;
+  font-size: $size;
+  line-height: $line-height;
+}
+
+@mixin set-flex($direction: row, $wrap: wrap){
+  display: flex;
+  flex-flow: $direction $wrap;
+}
+
+@mixin set-grid(){
+  display: grid;
+}
+
+@mixin grid-rows($row-start, $row-end){
+  grid-row-start: $row-start;
+  grid-row-end: $row-end;
+}
+
+@mixin grid-columns($column-start, $column-end){
+  grid-column-start: $column-start;
+  grid-column-end: $column-end;
+}
+
+@mixin divider($color: $pick-a-color){
+  border-top: 2px solid $color;
+  margin-top: 1em;
+  padding-top: 1.5em;
+}
+
+
+// Zen element styles.
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $fonts-headline;
+  margin: 0;
+  color: $pick_a_color;
+  margin-bottom: 1em;
+  padding: .5em 1em;
+  display: inline-block;
+}
+
+  
+p {
+  @include set-font(1em, 1.5em);
+  padding: .5em 0;
+  margin: 0;
+}
+
+a {
+  border-bottom: 1px solid $pick_a_color;
+  color: $pick_a_color;
+  text-decoration: none;
+  transition: border-color 0.2s ease-in-out;
+  &:hover{
+    border-color: $pick_a_color;
+  }
+}

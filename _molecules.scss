@@ -1,0 +1,29 @@
+// Imports
+
+@use 'variables' as *;
+@use'atoms';
+
+[role="banner"]{
+@include atoms.set-flex()
+}
+
+[role="article"]{
+  padding: 5%;
+}
+
+.design-selection{
+  @include atoms.set-flex(column, unset)
+}
+
+.zen-resources{
+  @include atoms.set-flex()
+}
+
+.design-archives{
+  @include atoms.set-flex(column)
+}
+
+footer{
+  @include atoms.set-flex()
+}
+
