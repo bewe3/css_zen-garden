@@ -1,29 +1,30 @@
-// Imports
 
-@use 'variables' as *;
-@use'atoms';
 
 [role="banner"]{
-@include atoms.set-flex()
+@include set-flex();
 }
 
 [role="article"]{
-  padding: 5%;
+  padding: 1em;
 }
 
 .design-selection{
-  @include atoms.set-flex(column, unset)
+  @include set-flex(column);
+  @include add-border();
 }
 
 .zen-resources{
-  @include atoms.set-flex()
+  @include set-flex(column);
+  @include add-border();
 }
 
 .design-archives{
-  @include atoms.set-flex(column)
+  @include set-flex(column);
+  @include add-border();
 }
 
 footer{
-  @include atoms.set-flex()
+  @include set-flex();
+  @include add-border();
 }
 
