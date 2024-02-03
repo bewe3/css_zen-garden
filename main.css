@@ -1,0 +1,17 @@
+/*Our colors:
+-black: 090b0f
+- maroon: 381c1f
+-dark red: a32b1f
+-orange: e24c19
+-yellow: f8950f
+-white: fff9cb*/
+/*borrowed fonts from example, not final*/
+/*put our colors where I thought they might fit,
+but I couldn't really test it much without all the pieces.
+We can adjust later*/
+/*test*/
+body {
+  padding: 5%;
+  background-color: purple;
+  background-color: #e24c19;
+}/*# sourceMappingURL=main.css.map */
