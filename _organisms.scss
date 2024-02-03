@@ -1,6 +1,10 @@
-/*test*/
+//test
 body {
     padding: 5%;
-    background-color: purple;
     background-color: $background-color;
+    font-family: $fonts-body;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $fonts-headline;
 }
