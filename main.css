@@ -1,3 +1,62 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: "arial narrow", Arial, Verdana, sans-serif;
+  margin: 0;
+  color: #381c1f;
+  margin-bottom: 1em;
+  padding: 0.5em 1em;
+  display: inline-block;
+}
+
+p {
+  font-family: verdana, arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  padding: 0.5em 0;
+  margin: 0;
+}
+
+a {
+  color: #fff9cb;
+  text-decoration: none;
+  transition: border-color 0.2s ease-in-out;
+}
+a:hover {
+  color: #f8950f;
+}
+
+[role=banner] {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+[role=article] {
+  padding: 1em;
+}
+
+.design-selection {
+  display: flex;
+  flex-flow: column wrap;
+  border: 2px solid #381c1f;
+}
+
+.zen-resources {
+  display: flex;
+  flex-flow: column wrap;
+  border: 2px solid #381c1f;
+}
+
+.design-archives {
+  display: flex;
+  flex-flow: column wrap;
+  border: 2px solid #381c1f;
+}
+
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  border: 2px solid #381c1f;
+}
+
 body {
   padding: 5%;
   background-color: #e24c19;
@@ -5,16 +64,4 @@ body {
   color: #381c1f;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "arial narrow", Arial, Verdana, sans-serif;
-  color: #381c1f;
-}
-
-a {
-  text-decoration: none;
-  color: #a32b1f;
-}
-
-a:hover {
-  color: #f8950f;
-}/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */

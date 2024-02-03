@@ -1,0 +1,30 @@
+
+
+[role="banner"]{
+@include set-flex();
+}
+
+[role="article"]{
+  padding: 1em;
+}
+
+.design-selection{
+  @include set-flex(column);
+  @include add-border();
+}
+
+.zen-resources{
+  @include set-flex(column);
+  @include add-border();
+}
+
+.design-archives{
+  @include set-flex(column);
+  @include add-border();
+}
+
+footer{
+  @include set-flex();
+  @include add-border();
+}
+
