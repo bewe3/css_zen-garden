@@ -4,17 +4,3 @@ body {
     font-family: $fonts-body;
     color: $primary;
 }
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: $fonts-headline;
-    color: $primary;
-}
-
-a {
-    text-decoration: none;
-    color: $accent1;
-}
-
-a:hover {
-    color: $accent2;
-}
