@@ -2,8 +2,19 @@ body {
   padding: 5%;
   background-color: #e24c19;
   font-family: verdana, arial, sans-serif;
+  color: #381c1f;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "arial narrow", Arial, Verdana, sans-serif;
+  color: #381c1f;
+}
+
+a {
+  text-decoration: none;
+  color: #a32b1f;
+}
+
+a:hover {
+  color: #f8950f;
 }/*# sourceMappingURL=main.css.map */
