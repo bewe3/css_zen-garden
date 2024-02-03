@@ -1,0 +1,21 @@
+//Our colors:
+//black: 090b0f
+//maroon: 381c1f
+//dark red: a32b1f
+//orange: e24c19
+//yellow: f8950f
+//white: fff9cb
+
+//borrowed fonts from example, not final
+$fonts-headline: "arial narrow", Arial, Verdana, sans-serif;
+$fonts-body: verdana, arial, sans-serif;
+
+//put our colors where I thought they might fit,
+//but I couldn't really test it much without all the pieces.
+//We can adjust later
+$background-color: #e24c19;
+$primary: #381c1f;
+$accent1: #a32b1f;
+$accent2: #f8950f;
+$text-dark: #090b0f;
+$text-light: #fff9cb;
