@@ -7,6 +7,12 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
 }
 
+h1 {
+  font-size: 2em;
+  margin-bottom: -1em;
+  padding-left: 0.7em;
+}
+
 p {
   font-family: verdana, arial, sans-serif;
   font-size: 1em;
@@ -24,9 +30,13 @@ a:hover {
   color: #f8950f;
 }
 
+abbr {
+  text-decoration: unset;
+}
+
 [role=banner] {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
 }
 
 [role=article] {
