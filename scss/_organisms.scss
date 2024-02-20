@@ -4,3 +4,56 @@ body {
     font-family: $fonts-body;
     color: $primary;
 }
+
+/*HELP: In order to match the wireframes, somehow we need
+to get the .main-supporting footer beneath .sidebar
+
+I do not know how to do this, at first I was going to try
+using flex order but I don't know of any way to put elements
+from different parent objects into the same flex
+
+- Caleb*/
+.page-wrapper/*, .main-supporting, .sidebar*/{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*Borders for everything that the wireframe said*/
+/*HELP: There are some elements which have borders around
+them which shouldn't, even when I comment out all of
+these properties here. I don't want to mess up anyone
+else's work by changing it, so I'm requesting help here
+
+- Caleb*/
+div:not(.summary, .extra1, .extra2, .extra3, .extra4, .extra5, .extra6) {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.page-wrapper {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+/*HELP: I don't know how to use CSS to insert an image into
+the places where the wireframe says that images should go
+
+- Caleb*/
+
+
+
+/*Only in mobile view*/
+@media only screen and (max-width: 699px) {
+    body {
+        
+    }
+}
+
+/*Only in desktop view*/
+@media only screen and (min-width: 700px) {
+
+    body {
+
+    }
+
+
+}
