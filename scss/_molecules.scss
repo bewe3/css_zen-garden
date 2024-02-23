@@ -8,6 +8,40 @@
   padding: 1em;
 }
 
+
+
+
+/***************************
+    Road to Enlightenment
+****************************/
+
+
+.preamble {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  align-items: start;
+
+  &::before {
+    content: '';
+    background: url('https://placehold.co/400') no-repeat center center;
+    background-size: cover;
+    grid-column: 1 / 2; 
+    grid-row: 1 / -1; 
+    min-height: 800%; 
+  }
+
+  h3, p {
+    grid-column: 2 / 3;
+    margin: 0 1rem;
+  }
+}
+
+
+
+
+
+
+
 .design-selection{
   @include set-flex(column);
   @include add-border();
