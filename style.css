@@ -67,6 +67,13 @@ footer {
   border: 2px solid #381c1f;
 }
 
+/************************
+   Road to Enlightenment
+*************************/
+.preamble h3 {
+  text-decoration: underline;
+}
+
 body {
   padding: 5%;
   background-color: #e24c19;
@@ -111,4 +118,43 @@ the places where the wireframe says that images should go
 
 - Caleb*/
 /*Only in mobile view*/
-/*Only in desktop view*//*# sourceMappingURL=style.css.map */
+/*@media only screen and (max-width: 699px) {
+    body {
+
+    }
+}*/
+/*Only in desktop view*/
+/*@media only screen and (min-width: 700px) {
+
+    body {
+
+    }
+
+
+}*/
+/***************************
+    Road to Enlightenment
+****************************/
+@media (min-width: 650px) {
+  .preamble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+  .preamble::before {
+    content: "";
+    background: url("https://placehold.co/400") no-repeat center center;
+    background-size: cover;
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    min-height: 600%;
+    max-width: 400px;
+    margin-left: 5%;
+  }
+  .preamble h3, .preamble p {
+    grid-column: 2/3;
+    margin: 0 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

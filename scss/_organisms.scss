@@ -59,3 +59,31 @@ the places where the wireframe says that images should go
 
 
 }*/
+
+/***************************
+    Road to Enlightenment
+****************************/
+@media (min-width: 650px){
+    .preamble {
+      display: grid;
+      grid-template-columns: 1fr 1fr; 
+      align-items: start;
+    
+      &::before {
+        content: '';
+        background: url($placeHolder400) no-repeat center center;
+        background-size: cover;
+        grid-column: 1 / 2; 
+        grid-row: 1 / -1;
+        min-height: 600%;
+        max-width: 400px;
+        margin-left: 5%; 
+      }
+    
+      h3, p {
+        grid-column: 2 / 3;
+        margin: 0 1rem;
+      }
+    }
+  
+  }
