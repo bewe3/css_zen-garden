@@ -15,6 +15,10 @@ body {
     border-radius: 10px;
 }
 
+/***************************
+       Slides Format
+****************************/
+
 /*HELP: In order to match the wireframes, somehow we need
 to get the .main-supporting footer beneath .sidebar
 
@@ -56,17 +60,17 @@ the places where the wireframe says that images should go
 
 
 /*Only in mobile view*/
-/*@media only screen and (max-width: 699px) {
+/*@media only screen and (max-width: 649px) {
     body {
-        
+        //I don't think this is even needed
     }
 }*/
 
 /*Only in desktop view*/
-/*@media only screen and (min-width: 700px) {
+/*@media only screen and (min-width: 650px) {
 
     body {
-
+        //I don't think this is even needed
     }
 
 
@@ -98,3 +102,95 @@ the places where the wireframe says that images should go
     }
   
   }
+
+
+/***************************
+           About
+****************************/
+
+.explanation {
+    justify-content: right;
+}
+
+@media (max-width:649px) {
+    .explanation {
+
+        &::after {
+            content: url($placeHolder400);
+        }
+    }
+}
+
+@media (min-width: 650px) {
+    .explanation {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 3em 10em 12em;
+
+        &::after {
+            content: url($placeHolder400);
+            grid-row: 1/4;
+            grid-column: 2/3;
+            background-color: red;
+        }
+    }
+}
+
+
+/***************************
+        Participation
+****************************/
+
+@media (max-width: 649px) {
+/*HELP: I don't know a good way to get the pseudo-element image
+behind .participation*/
+    /*#zen-supporting {
+        position: relative;
+        z-index: 1;
+    }
+
+    .participation {
+        position: absolute;
+        
+        &::after {
+            content: url($placeHolder400);
+            position: absolute;
+            top:0;
+            z-index: -1;
+        }
+        
+    }*/
+
+
+    .participation h3 {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        //HELP: why isn't it centered?
+    }
+
+    .participation > p {
+        display: list-item;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+}
+
+@media (min-width: 650px) {
+    .participation {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 3em 9em 7.5em 9em;
+        align-items: start;
+
+        &::before {
+            content: url($placeHolder400);
+            grid-row: 2/5;
+            
+        }
+    }
+
+    .participation h3 {
+        grid-column: 1/3;
+    }
+}
