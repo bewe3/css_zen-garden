@@ -1,8 +1,18 @@
+html{
+    background-image: url($forestLavaFlow);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 body {
+    width: 80%;
+    margin: 10px auto;
     padding: 5%;
     background-color: $background-color;
     font-family: $fonts-body;
     color: $primary;
+    border-radius: 10px;
 }
 
 /*HELP: In order to match the wireframes, somehow we need
@@ -16,6 +26,8 @@ from different parent objects into the same flex
 .page-wrapper/*, .main-supporting, .sidebar*/{
     display: flex;
     flex-wrap: wrap;
+    border-radius: 1rem;
+
 }
 
 /*Borders for everything that the wireframe said*/
@@ -63,6 +75,8 @@ the places where the wireframe says that images should go
 /***************************
     Road to Enlightenment
 ****************************/
+
+
 @media (min-width: 650px){
     .preamble {
       display: grid;
@@ -71,13 +85,10 @@ the places where the wireframe says that images should go
     
       &::before {
         content: '';
-        background: url($placeHolder400) no-repeat center center;
+        background: url($forestLavaFlow) no-repeat center center;
         background-size: cover;
-        grid-column: 1 / 2; 
-        grid-row: 1 / -1;
         min-height: 600%;
-        max-width: 400px;
-        margin-left: 5%; 
+        margin: 1rem; 
       }
     
       h3, p {
