@@ -26,4 +26,5 @@ The website will utilize a combination of Google Fonts to enhance the visual app
 
 ### Decorative Font
 - Font: [Rubik Moonrocks](https://fonts.google.com/specimen/Rubik+Mono+One)
-- Used for special elements
+- Used for special element
+
