@@ -1,39 +1,35 @@
-
-
-[role="banner"]{
-@include set-flex(column);
+[role='banner'] {
+  @include set-flex(column);
 }
 
-[role="article"]{
+[role='article'] {
   padding: 1em;
 }
 
-
-.design-selection{
+.design-selection {
   @include set-flex(column);
   @include add-border();
 }
 
-.zen-resources{
+.zen-resources {
   @include set-flex(column);
   @include add-border();
 }
 
-.design-archives{
+.design-archives {
   @include set-flex(column);
   @include add-border();
 }
 
-footer{
+footer {
   @include set-flex();
   @include add-border();
 }
-
 
 /************************
    Road to Enlightenment
 *************************/
 
-.preamble h3{
+.preamble h3 {
   text-decoration: underline;
 }
