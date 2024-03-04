@@ -1,6 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+/***********************
+    keyframes
+************************/
+@keyframes lavaLink {
+  0%, 33% {
+    transform: scale(1.1);
+    color: #da392b;
+  }
+  66% {
+    transform: scale(1);
+    color: #890e0e;
+  }
+  100% {
+    transform: scale(0.9);
+    color: #090b0f;
+  }
+}
 h1,
 h2,
 h3,
@@ -33,7 +50,7 @@ a {
   transition: border-color 0.2s ease-in-out;
 }
 a:hover {
-  color: #890e0e;
+  animation: lavaLink 2s linear infinite;
 }
 
 abbr {
