@@ -1,4 +1,12 @@
-h1, h2, h3, h4, h5, h6 {
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "arial narrow", Arial, Verdana, sans-serif;
   margin: 0;
   color: #381c1f;
@@ -9,8 +17,6 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2em;
-  margin-bottom: -1em;
-  padding-left: 0.7em;
 }
 
 p {
@@ -82,13 +88,84 @@ html {
 }
 
 body {
-  width: 80%;
-  margin: 10px auto;
-  padding: 5%;
+  margin: 0;
   background-color: #baa394;
-  font-family: verdana, arial, sans-serif;
   color: #381c1f;
-  border-radius: 10px;
+}
+
+header[role=banner],
+div.summary[role=article] {
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: #b2ae92;
+  min-height: 50vh;
+  flex-grow: 1;
+}
+
+div.summary[role=article] {
+  justify-content: flex-start;
+}
+
+header[role=banner] {
+  position: relative;
+  margin-bottom: 0;
+}
+header[role=banner] h1 {
+  width: 80%;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik Mono One", cursive;
+  font-size: clamp(2rem, 7vw, 7rem);
+  color: transparent;
+  background: linear-gradient(to bottom, #ffb247, #db6740, #a1433a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 1;
+}
+header[role=banner] h2 {
+  width: 80%;
+  margin: 0;
+  padding: 0;
+  font-family: "IM Fell Double Pica SC", serif;
+  font-size: clamp(1rem, 4vw, 4rem);
+  text-transform: uppercase;
+  color: #da392b;
+  z-index: 1;
+}
+header[role=banner]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.83)), url("../images/volcanoFlow.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 0;
+}
+
+div.summary[role=article] p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: clamp(0.6rem, 2vw, 2rem);
+  margin: 0.5rem;
+}
+div.summary[role=article] p:nth-child(1) {
+  font-style: italic;
+  font-weight: normal;
+  max-width: 40%;
+}
+div.summary[role=article] p:nth-child(2) {
+  font-style: normal;
+  font-weight: bold;
+  font-size: clamp(0.8rem, 2.3vw, 2.3rem);
+  max-width: 50%;
 }
 
 /*HELP: In order to match the wireframes, somehow we need
@@ -102,7 +179,6 @@ from different parent objects into the same flex
 .page-wrapper {
   display: flex;
   flex-wrap: wrap;
-  border-radius: 1rem;
 }
 
 /*Borders for everything that the wireframe said*/
@@ -159,7 +235,8 @@ the places where the wireframe says that images should go
     min-height: 600%;
     margin: 1rem;
   }
-  .preamble h3, .preamble p {
+  .preamble h3,
+  .preamble p {
     grid-column: 2/3;
     margin: 0 1rem;
   }

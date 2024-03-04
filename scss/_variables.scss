@@ -7,8 +7,17 @@
 //white: fff9cb
 
 //borrowed fonts from example, not final
-$fonts-headline: "arial narrow", Arial, Verdana, sans-serif;
+$fonts-headline: 'arial narrow', Arial, Verdana, sans-serif;
 $fonts-body: verdana, arial, sans-serif;
+
+//final fonts
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+$serif-font: 'IM Fell Double Pica SC', serif;
+$sans-serif-font: 'Fira Sans', sans-serif;
+$decorative-font: 'Rubik Mono One', cursive;
 
 //Colors look good right now
 //Will revisit if anything seems funky later
@@ -16,14 +25,16 @@ $background-color: #baa394;
 $primary: #381c1f;
 $accent1: #a32b1f;
 $accent2: #890e0e;
+$accent-bright:#da392b;
 $text-dark: #090b0f;
 $text-light: #fff9cb;
+$text-mid: #b2ae92;
 
 
 // Images
 
-$placeHolder400: "https://placehold.co/400";
-$fireLava: "../images/fireLava.jpg";
-$forestLavaFlow: "../images/forestLavaFlow.jpg";
-$volcanoFlow: "../images/volcanoFlow.jpg";
-$lavaFlow: "../images/lavaFlow.jpg";
+$placeHolder400: 'https://placehold.co/400';
+$fireLava: '../images/fireLava.jpg';
+$forestLavaFlow: '../images/forestLavaFlow.jpg';
+$volcanoFlow: '../images/volcanoFlow.jpg';
+$lavaFlow: '../images/lavaFlow.jpg';

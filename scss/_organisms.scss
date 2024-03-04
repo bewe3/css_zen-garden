@@ -1,19 +1,103 @@
-html{
-    background-image: url($forestLavaFlow);
+html {
+  background-image: url($forestLavaFlow);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+// removed body padding/margin to align with wireframe
+body {
+  margin: 0;
+  background-color: $background-color;
+  color: $primary;
+}
+
+// begin title page - bryan
+header[role='banner'],
+div.summary[role='article'] {
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: $text-mid;
+  min-height: 50vh;
+  flex-grow: 1;
+}
+
+div.summary[role='article'] {
+  justify-content: flex-start;
+}
+
+header[role='banner'] {
+  position: relative;
+  margin-bottom: 0;
+  h1 {
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    font-family: $decorative-font;
+    font-size: clamp(2rem, 7vw, 7rem);
+    color: transparent;
+    background: linear-gradient(to bottom, #ffb247, #db6740, #a1433a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1;
+  }
+
+  h2 {
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    font-family: $serif-font;
+    font-size: clamp(1rem, 4vw, 4rem);
+    text-transform: uppercase;
+    color: $accent-bright;
+    z-index: 1;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.83)
+      ),
+      url($volcanoFlow);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    z-index: 0;
+  }
 }
 
-body {
-    width: 80%;
-    margin: 10px auto;
-    padding: 5%;
-    background-color: $background-color;
-    font-family: $fonts-body;
-    color: $primary;
-    border-radius: 10px;
+div.summary[role='article'] {
+  p {
+    font-family: $sans-serif-font;
+    font-size: clamp(0.6rem, 2vw, 2rem);
+    margin: 0.5rem;
+    &:nth-child(1) {
+      font-style: italic;
+      font-weight: normal;
+      max-width: 40%;
+    }
+    &:nth-child(2) {
+      font-style: normal;
+      font-weight: bold;
+      font-size: clamp(0.8rem, 2.3vw, 2.3rem);
+      max-width: 50%;
+    }
+  }
 }
+
+// end title page
 
 /*HELP: In order to match the wireframes, somehow we need
 to get the .main-supporting footer beneath .sidebar
@@ -23,11 +107,9 @@ using flex order but I don't know of any way to put elements
 from different parent objects into the same flex
 
 - Caleb*/
-.page-wrapper/*, .main-supporting, .sidebar*/{
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 1rem;
-
+.page-wrapper/*, .main-supporting, .sidebar*/ {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /*Borders for everything that the wireframe said*/
@@ -40,20 +122,18 @@ else's work by changing it, so I'm requesting help here
 
 - Caleb*/
 div:not(.summary, .extra1, .extra2, .extra3, .extra4, .extra5, .extra6) {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 .page-wrapper {
-    border-left: 2px solid black;
-    border-right: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
 }
 
 /*HELP: I don't know how to use CSS to insert an image into
 the places where the wireframe says that images should go
 
 - Caleb*/
-
-
 
 /*Only in mobile view*/
 /*@media only screen and (max-width: 699px) {
@@ -76,25 +156,24 @@ the places where the wireframe says that images should go
     Road to Enlightenment
 ****************************/
 
+@media (min-width: 650px) {
+  .preamble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
 
-@media (min-width: 650px){
-    .preamble {
-      display: grid;
-      grid-template-columns: 1fr 1fr; 
-      align-items: start;
-    
-      &::before {
-        content: '';
-        background: url($forestLavaFlow) no-repeat center center;
-        background-size: cover;
-        min-height: 600%;
-        margin: 1rem; 
-      }
-    
-      h3, p {
-        grid-column: 2 / 3;
-        margin: 0 1rem;
-      }
+    &::before {
+      content: '';
+      background: url($forestLavaFlow) no-repeat center center;
+      background-size: cover;
+      min-height: 600%;
+      margin: 1rem;
     }
-  
+
+    h3,
+    p {
+      grid-column: 2 / 3;
+      margin: 0 1rem;
+    }
   }
+}
