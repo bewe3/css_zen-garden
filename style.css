@@ -95,7 +95,7 @@ footer {
 /************************
    Road to Enlightenment
 *************************/
-.preamble h3 {
+.preamble h3, .explanation h3 {
   text-decoration: underline;
 }
 
