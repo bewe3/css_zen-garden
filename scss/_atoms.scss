@@ -49,23 +49,31 @@
 
 
 /***********************
+
     keyframes
-    color: $accent2;
 
 ************************/
 
 
 @keyframes lavaLink{
-  25%{
+  0%{
+    color: $accent2;
     font-weight: bold;
+  }
+  33%{
+    font-weight: bold;
+    color: $accent1;
+  }
+  66%{
+    font-weight: bolder;
     color: $accent2;
   }
-  75%{
-    font-weight: bolder;
-    color: $text-dark;
+  90%{
+    font-weight: bold;
+    color: $accent1;
   }
   100%{
-    font-weight: bold;
+    font-weight: bolder;
     color: $accent2;
   }
 }
@@ -76,6 +84,7 @@
 
 // Zen element styles.
 
+
 h1,
 h2,
 h3,
@@ -83,6 +92,8 @@ h4,
 h5,
 h6 {
   @include basicHs();
+  color: $text-mid;
+
 }
 
 h1 {
@@ -93,14 +104,15 @@ p {
   @include set-font(1em, 1.5em);
   padding: 0.5em 0;
   margin: 0;
+  color: $text-mid;
 }
 
 a {
-  color: $text-light;
+  color: $accent2;
   text-decoration: none;
-  transition: border-color 0.2s ease-in-out;
+  // transition: border-color 0.5s ease-in-out;
   &:hover {
-    animation: lavaLink 2s linear forwards;
+    animation: lavaLink 3s linear infinite;
   }
 }
 // a{
