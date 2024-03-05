@@ -3,19 +3,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
 /***********************
     keyframes
+    color: $accent2;
+
 ************************/
 @keyframes lavaLink {
-  0%, 33% {
-    transform: scale(1.1);
-    color: #da392b;
-  }
-  66% {
-    transform: scale(1);
+  25% {
+    font-weight: bold;
     color: #890e0e;
   }
-  100% {
-    transform: scale(0.9);
+  75% {
+    font-weight: bolder;
     color: #090b0f;
+  }
+  100% {
+    font-weight: bold;
+    color: #890e0e;
   }
 }
 h1,
@@ -50,7 +52,7 @@ a {
   transition: border-color 0.2s ease-in-out;
 }
 a:hover {
-  animation: lavaLink 2s linear infinite;
+  animation: lavaLink 2s linear forwards;
 }
 
 abbr {
