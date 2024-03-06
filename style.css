@@ -290,7 +290,7 @@ the places where the wireframe says that images should go
   align-items: start;
   gap: 1.5rem;
   grid-template-columns: auto;
-  background: url("../images/fireLava.jpg") center no-repeat;
+  background: url("../images/volcanoFlow.jpg") center no-repeat;
 }
 .requirements p:not(:last-of-type) {
   height: 100%;
