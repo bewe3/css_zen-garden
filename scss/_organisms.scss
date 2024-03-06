@@ -177,3 +177,24 @@ the places where the wireframe says that images should go
     }
   }
 }
+
+
+/*************************
+      Requirements
+*************************/
+
+.requirements {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: start;
+  gap: 1.5rem;
+  grid-template-columns: auto;
+  background: url($fireLava) center no-repeat;
+  & p:not(:last-of-type){
+    height: 100%;
+    text-align: center;
+    grid-row: 2;
+    background-color: $primary;
+    border: solid black 1px;
+  }
+}
