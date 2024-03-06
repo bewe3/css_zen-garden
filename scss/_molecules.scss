@@ -26,10 +26,43 @@ footer {
   @include add-border();
 }
 
-/************************
-   Road to Enlightenment
-*************************/
+
+
+ //underlined h3 elements
 
 .preamble h3, .explanation h3{
   text-decoration: underline;
 }
+
+
+
+
+
+/*************************
+      Requirements
+*************************/
+
+
+.requirements {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: start;
+  gap: 10px;
+  // background: url($lavaFlow);
+  padding: 20px;
+  & h3{
+    text-align: center;
+    grid-row: 1,4;
+  }
+  & p:not(:last-of-type){
+    background-color: yellow;
+    height: 100%;
+    text-align: center;
+    grid-row: 2;
+  }
+  & p:last-of-type{
+    grid-row: 3;
+  }
+
+}
+

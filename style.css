@@ -92,11 +92,32 @@ footer {
   border: 2px solid #381c1f;
 }
 
-/************************
-   Road to Enlightenment
-*************************/
 .preamble h3, .explanation h3 {
   text-decoration: underline;
+}
+
+/*************************
+      Requirements
+*************************/
+.requirements {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: start;
+  gap: 10px;
+  padding: 20px;
+}
+.requirements h3 {
+  text-align: center;
+  grid-row: 1, 4;
+}
+.requirements p:not(:last-of-type) {
+  background-color: yellow;
+  height: 100%;
+  text-align: center;
+  grid-row: 2;
+}
+.requirements p:last-of-type {
+  grid-row: 3;
 }
 
 html {
