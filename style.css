@@ -99,26 +99,11 @@ footer {
 /*************************
       Requirements
 *************************/
-.requirements {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  align-items: start;
-  gap: 1.5rem;
-  grid-template-columns: auto;
-  background: url("../images/fireLava.jpg") center no-repeat;
-}
 .requirements h3 {
   text-align: center;
   grid-row: 1;
   grid-column: 1/5;
   font-size: 2rem;
-}
-.requirements p:not(:last-of-type) {
-  height: 100%;
-  text-align: center;
-  grid-row: 2;
-  background-color: #baa394;
-  border: solid black 1px;
 }
 .requirements p:last-of-type {
   grid-row: 3;
@@ -286,6 +271,24 @@ the places where the wireframe says that images should go
     grid-column: 2/3;
     margin: 0 1rem;
   }
+}
+/*************************
+      Requirements
+*************************/
+.requirements {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: start;
+  gap: 1.5rem;
+  grid-template-columns: auto;
+  background: url("../images/fireLava.jpg") center no-repeat;
+}
+.requirements p:not(:last-of-type) {
+  height: 100%;
+  text-align: center;
+  grid-row: 2;
+  background-color: #baa394;
+  border: solid black 1px;
 }
 
 /*# sourceMappingURL=style.css.map */
