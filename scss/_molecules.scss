@@ -26,10 +26,48 @@ footer {
   @include add-border();
 }
 
-/************************
-   Road to Enlightenment
-*************************/
 
-.preamble h3 {
+
+ //underlined h3 elements
+
+.preamble h3, .explanation h3{
   text-decoration: underline;
 }
+
+
+
+
+
+/*************************
+      Requirements
+*************************/
+
+
+.requirements {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: start;
+  gap: 1.5rem;
+  grid-template-columns: auto;
+  background: url($fireLava) center no-repeat;
+  & h3{
+    text-align: center;
+    grid-row: 1;
+    grid-column: 1/5;
+    font-size: 2rem;
+  }
+  & p:not(:last-of-type){
+    height: 100%;
+    text-align: center;
+    grid-row: 2;
+    background-color: $background-color;
+    border: solid black 1px;
+  }
+  & p:last-of-type{
+    grid-row: 3;
+    grid-column: 1 / 5;
+    background-color: $background-color;
+  }
+
+}
+

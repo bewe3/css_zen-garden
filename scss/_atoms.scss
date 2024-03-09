@@ -44,6 +44,36 @@
   border: $width $style $color;
 }
 
+
+
+
+
+/***********************
+    keyframes
+    color: $accent2;
+
+************************/
+
+
+@keyframes lavaLink{
+  25%{
+    font-weight: bold;
+    color: $accent2;
+  }
+  75%{
+    font-weight: bolder;
+    color: $text-dark;
+  }
+  100%{
+    font-weight: bold;
+    color: $accent2;
+  }
+}
+
+
+
+
+
 // Zen element styles.
 
 h1,
@@ -70,9 +100,20 @@ a {
   text-decoration: none;
   transition: border-color 0.2s ease-in-out;
   &:hover {
-    color: $accent2;
+    animation: lavaLink 2s linear forwards;
   }
 }
+// a{
+//   color: $text-light;
+//   background: linear-gradient(to right, blue 50%, black 50%);
+//   background-clip: text;
+//   transition: background-position 1s;
+//   background-size: 200% 100%;
+//   background-position: -100% 0;
+//   &:hover{
+//     background-position: 0 0;
+//   }
+// }
 
 abbr {
   text-decoration: unset;
