@@ -61,7 +61,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  animation: lavaLink 3s linear infinite;
+  animation: lavaLink 4s linear infinite;
 }
 
 abbr {
