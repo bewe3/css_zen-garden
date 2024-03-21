@@ -296,8 +296,9 @@ the places where the wireframe says that images should go
   height: 100%;
   text-align: center;
   grid-row: 2;
-  background-color: #080607;
+  background-color: #211a1e;
   border: solid black 1px;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
