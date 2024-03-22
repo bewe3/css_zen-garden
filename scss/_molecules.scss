@@ -6,13 +6,7 @@
   padding: 1em;
 }
 
-.design-selection {
-  @include set-flex(column);
-  @include add-border();
-}
-
-.zen-resources {
-  @include set-flex(column);
+.main.supporting div {
   @include add-border();
 }
 
@@ -26,17 +20,9 @@ footer {
   @include add-border();
 }
 
-
-
- //underlined h3 elements
-
 .preamble h3, .explanation h3{
   text-decoration: underline;
 }
-
-
-
-
 
 /*************************
       Requirements
@@ -70,4 +56,3 @@ footer {
   }
 
 }
-
