@@ -2,22 +2,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
 /***********************
+
     keyframes
-    color: $accent2;
 
 ************************/
 @keyframes lavaLink {
-  25% {
+  0% {
+    color: #730b0b;
     font-weight: bold;
-    color: #890e0e;
   }
-  75% {
+  33% {
+    font-weight: bold;
+    color: #a32b1f;
+  }
+  66% {
     font-weight: bolder;
-    color: #090b0f;
+    color: #730b0b;
+  }
+  90% {
+    font-weight: bold;
+    color: #a32b1f;
   }
   100% {
-    font-weight: bold;
-    color: #890e0e;
+    font-weight: bolder;
+    color: #730b0b;
   }
 }
 h1,
@@ -29,10 +37,12 @@ h6 {
   font-family: "IM Fell Double Pica SC", serif;
   text-transform: uppercase;
   margin: 0;
-  color: #11080b;
+  color: #080607;
+  margin-bottom: 1em;
+  padding: 0.5em 1em;
   font-size: clamp(1rem, 4vw, 4rem);
-  padding: 1rem 0;
   display: inline-block;
+  color: #b2ae92;
 }
 
 h1 {
@@ -45,15 +55,15 @@ p {
   line-height: 1.5em;
   padding: 0.5em 0;
   margin: 0;
+  color: #b2ae92;
 }
 
 a {
-  color: #fff9cb;
+  color: #730b0b;
   text-decoration: none;
-  transition: border-color 0.2s ease-in-out;
 }
 a:hover {
-  animation: lavaLink 2s linear forwards;
+  animation: lavaLink 4s linear infinite;
 }
 
 abbr {
@@ -69,6 +79,19 @@ abbr {
   padding: 1em;
 }
 
+
+.design-selection {
+  display: flex;
+  flex-flow: column wrap;
+  border: 2px solid #080607;
+}
+
+.zen-resources {
+  display: flex;
+  flex-flow: column wrap;
+  border: 2px solid #080607;
+}
+
 .main.supporting div {
   border-top: 0.25rem solid #11080b;
 }
@@ -76,7 +99,7 @@ abbr {
 .design-archives {
   display: flex;
   flex-flow: column wrap;
-  border-top: 0.25rem solid #11080b;
+  border: 2px solid #080607;
 }
 
 footer {
@@ -92,31 +115,16 @@ footer {
 /*************************
       Requirements
 *************************/
-.requirements {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  align-items: start;
-  gap: 1.5rem;
-  grid-template-columns: auto;
-  background: url("../images/fireLava.jpg") center no-repeat;
-}
 .requirements h3 {
   text-align: center;
   grid-row: 1;
   grid-column: 1/5;
   font-size: 2rem;
 }
-.requirements p:not(:last-of-type) {
-  height: 100%;
-  text-align: center;
-  grid-row: 2;
-  background-color: #baa394;
-  border: solid black 1px;
-}
 .requirements p:last-of-type {
   grid-row: 3;
   grid-column: 1/5;
-  background-color: #baa394;
+  background-color: #080607;
 }
 
 html {
@@ -128,8 +136,8 @@ html {
 
 body {
   margin: 0;
-  background-color: #baa394;
-  color: #11080b;
+  background-color: #080607;
+  color: #080607;
 }
 
 header[role=banner],
@@ -434,6 +442,25 @@ footer a:last-child {
     grid-template-rows: repeat(2, auto);
     grid-template-columns: repeat(4, auto);
   }
+}
+/*************************
+      Requirements
+*************************/
+.requirements {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: start;
+  gap: 1.5rem;
+  grid-template-columns: auto;
+  background: url("../images/volcanoFlow.jpg") center no-repeat;
+}
+.requirements p:not(:last-of-type) {
+  height: 100%;
+  text-align: center;
+  grid-row: 2;
+  background-color: #211a1e;
+  border: solid black 1px;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

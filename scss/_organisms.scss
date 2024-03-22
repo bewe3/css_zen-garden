@@ -8,7 +8,7 @@ html {
 // removed body padding/margin to align with wireframe
 body {
   margin: 0;
-  background-color: $background-color;
+  background-color: $primary;
   color: $primary;
 }
 
@@ -341,4 +341,26 @@ footer a:last-child {
   grid-template-columns: repeat(4, auto);
 }
 
+}
+
+
+/*************************
+      Requirements
+*************************/
+
+.requirements {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: start;
+  gap: 1.5rem;
+  grid-template-columns: auto;
+  background: url($volcanoFlow) center no-repeat;
+  & p:not(:last-of-type){
+    height: 100%;
+    text-align: center;
+    grid-row: 2;
+    background-color: #211a1e;
+    border: solid black 1px;
+    border-radius: 5px;
+  }
 }
