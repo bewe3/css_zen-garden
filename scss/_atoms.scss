@@ -26,11 +26,12 @@
 }
 
 @mixin basicHs() {
-  font-family: $fonts-headline;
+  font-family: $serif-font;
+  text-transform: uppercase;
   margin: 0;
   color: $primary;
-  margin-bottom: 1em;
-  padding: 0.5em 1em;
+  font-size: clamp(1rem, 4vw, 4rem);
+  padding: 1rem 0;
   display: inline-block;
 }
 
@@ -40,8 +41,8 @@
   padding-top: 1.5em;
 }
 
-@mixin add-border($width: 2px, $style: solid, $color: $primary) {
-  border: $width $style $color;
+@mixin add-border($width: 0.25rem, $style: solid, $color: $primary) {
+  border-top: $width $style $color;
 }
 
 
