@@ -71,29 +71,18 @@ abbr {
 
 .main.supporting div {
   border-top: 0.25rem solid #11080b;
-  
-.design-selection {
-  display: flex;
-  flex-flow: column wrap;
-  border: 2px solid #381c1f;
-}
-
-.zen-resources {
-  display: flex;
-  flex-flow: column wrap;
-  border: 2px solid #381c1f;
 }
 
 .design-archives {
   display: flex;
   flex-flow: column wrap;
-  border: 2px solid #381c1f;
+  border-top: 0.25rem solid #11080b;
 }
 
 footer {
   display: flex;
   flex-flow: row wrap;
-  border: 2px solid #381c1f;
+  border-top: 0.25rem solid #11080b;
 }
 
 .preamble h3, .explanation h3 {
@@ -445,4 +434,6 @@ footer a:last-child {
     grid-template-rows: repeat(2, auto);
     grid-template-columns: repeat(4, auto);
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
