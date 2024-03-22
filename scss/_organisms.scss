@@ -8,7 +8,7 @@ html {
 // removed body padding/margin to align with wireframe
 body {
   margin: 0;
-  background-color: $background-color;
+  background-color: $primary;
   color: $primary;
 }
 
@@ -34,16 +34,17 @@ header[role='banner'] {
   position: relative;
   margin-bottom: 0;
   h1 {
-    width: 80%;
+    width: 90%;
     margin: 0;
     padding: 0;
     font-family: $decorative-font;
-    font-size: clamp(2rem, 7vw, 7rem);
+    font-size: clamp(2rem, 6.5vw, 6.5rem);
     color: transparent;
     background: linear-gradient(to bottom, #ffb247, #db6740, #a1433a);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    word-spacing: clamp(-2rem, -1.4rem, 1rem);
     z-index: 1;
   }
 
@@ -99,19 +100,6 @@ div.summary[role='article'] {
 
 // end title page
 
-/*HELP: In order to match the wireframes, somehow we need
-to get the .main-supporting footer beneath .sidebar
-
-I do not know how to do this, at first I was going to try
-using flex order but I don't know of any way to put elements
-from different parent objects into the same flex
-
-- Caleb*/
-.page-wrapper/*, .main-supporting, .sidebar*/ {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 /*Borders for everything that the wireframe said*/
 /*HELP: There are some elements which have borders around
 them which shouldn't (the footer with validation links,
@@ -121,36 +109,203 @@ these properties here. I don't want to mess up anyone
 else's work by changing it, so I'm requesting help here
 
 - Caleb*/
-div:not(.summary, .extra1, .extra2, .extra3, .extra4, .extra5, .extra6) {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-}
-.page-wrapper {
-  border-left: 2px solid black;
-  border-right: 2px solid black;
-}
 
 /*HELP: I don't know how to use CSS to insert an image into
 the places where the wireframe says that images should go
 
 - Caleb*/
 
-/*Only in mobile view*/
-/*@media only screen and (max-width: 699px) {
-    body {
-        
-    }
-}*/
+// Footers
 
-/*Only in desktop view*/
-/*@media only screen and (min-width: 700px) {
+footer {
+  height: 20vh;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  padding: 0;
+  width: 100%;
+  align-items: center;
+  background-color: $primary;
+  color: $text-mid;
+  font-family: $sans-serif-font;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 20%);
+  text-align: center;
+}
 
-    body {
+footer a {
+  padding: 1rem 1.5rem;
+  border-right: 0.2rem solid $text-light;
+  font-size: clamp(0.5rem, 5vw, 3rem);
+  height: 5vh;
+}
 
-    }
+footer a:last-child {
+  border-right: none;
+}
 
+.zen-resources {
+  height: 15vh;
+  position: relative;
+  bottom: 0;
+  padding: 0;
+  width: 100%;
+  align-items: center;
+  background-color: $primary;
+  color: $text-mid;
+  font-family: $sans-serif-font;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-}*/
+.zen-resources ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 20%);
+  align-items: center;
+}
+
+.zen-resources li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-right: 0.2rem solid $text-light;
+  font-size: clamp(0.5rem, 2vw, 2rem);
+  height: 5vh;
+}
+
+.zen-resources li:last-child {
+  border: none;
+}
+
+// sidebar grid
+
+.sidebar {
+  height: 80vh;
+}
+
+.wrapper {
+  height: 100%;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.83)
+    ),
+    url($volcanoFlow);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.design-selection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 55vh;
+  padding: 0;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.select {
+  top: 0;
+  padding: 0;
+  width: 100%;
+  color: $text-light;
+  text-align: center;
+}
+
+.design-selection nav {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.design-selection ul {
+  height: inherit;
+  width: 100%;
+  display: grid;
+  padding: 0;
+  margin: 0;
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: repeat(2, auto);
+}
+
+.design-selection li {
+  list-style-type: none;
+  font-family: $serif-font;
+  color: $accent-bright;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.design-name {
+  font-family: $decorative-font;
+  padding: 1.75rem;
+  color: transparent;
+  background: linear-gradient(to bottom, #ffb247, #db6740, #a1433a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.designer-name {
+  font-family: $sans-serif-font;
+}
+
+.design-archives {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  color: $text-light;
+  height: 10vh;
+  border: none;
+}
+
+.archives,
+.resources {
+  display: none;
+}
+
+.design-archives ul {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.next,
+.viewall {
+  font-family: $sans-serif-font;
+  padding: 1rem;
+}
+
+.next {
+  grid-area: 1 / 3 / 2 / 4;
+  border-right: none;
+}
+
+.viewall {
+  grid-area: 1 / 2 / 2 / 3;
+  text-align: center;
+  border-right: 0.2rem solid $text-light;
+  border-left: 0.2rem solid $text-light;
+  white-space: nowrap;
+}
 
 /***************************
     Road to Enlightenment
@@ -176,6 +331,16 @@ the places where the wireframe says that images should go
       margin: 0 1rem;
     }
   }
+  footer,
+  .zen-resources ul {
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: 1fr;
+  }
+.design-selection ul {
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(4, auto);
+}
+
 }
 
 
@@ -189,12 +354,13 @@ the places where the wireframe says that images should go
   align-items: start;
   gap: 1.5rem;
   grid-template-columns: auto;
-  background: url($fireLava) center no-repeat;
+  background: url($volcanoFlow) center no-repeat;
   & p:not(:last-of-type){
     height: 100%;
     text-align: center;
     grid-row: 2;
-    background-color: $background-color;
+    background-color: #211a1e;
     border: solid black 1px;
+    border-radius: 5px;
   }
 }
