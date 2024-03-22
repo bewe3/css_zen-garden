@@ -33,3 +33,7 @@ The website will utilize a combination of Google Fonts to enhance the visual app
 
 - Font: [Rubik Moonrocks](https://fonts.google.com/specimen/Rubik+Mono+One)
 - Used for special elements
+
+
+### Resourcess
+- [AI Images](https://deepai.org/machine-learning-model/text2img)

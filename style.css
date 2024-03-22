@@ -1,6 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+/***********************
+    keyframes
+    color: $accent2;
+
+************************/
+@keyframes lavaLink {
+  25% {
+    font-weight: bold;
+    color: #890e0e;
+  }
+  75% {
+    font-weight: bolder;
+    color: #090b0f;
+  }
+  100% {
+    font-weight: bold;
+    color: #890e0e;
+  }
+}
 h1,
 h2,
 h3,
@@ -34,7 +53,7 @@ a {
   transition: border-color 0.2s ease-in-out;
 }
 a:hover {
-  color: #890e0e;
+  animation: lavaLink 2s linear forwards;
 }
 
 abbr {
@@ -52,6 +71,63 @@ abbr {
 
 .main.supporting div {
   border-top: 0.25rem solid #11080b;
+  
+.design-selection {
+  display: flex;
+  flex-flow: column wrap;
+  border: 2px solid #381c1f;
+}
+
+.zen-resources {
+  display: flex;
+  flex-flow: column wrap;
+  border: 2px solid #381c1f;
+}
+
+.design-archives {
+  display: flex;
+  flex-flow: column wrap;
+  border: 2px solid #381c1f;
+}
+
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  border: 2px solid #381c1f;
+}
+
+.preamble h3, .explanation h3 {
+  text-decoration: underline;
+}
+
+/*************************
+      Requirements
+*************************/
+.requirements {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: start;
+  gap: 1.5rem;
+  grid-template-columns: auto;
+  background: url("../images/fireLava.jpg") center no-repeat;
+}
+.requirements h3 {
+  text-align: center;
+  grid-row: 1;
+  grid-column: 1/5;
+  font-size: 2rem;
+}
+.requirements p:not(:last-of-type) {
+  height: 100%;
+  text-align: center;
+  grid-row: 2;
+  background-color: #baa394;
+  border: solid black 1px;
+}
+.requirements p:last-of-type {
+  grid-row: 3;
+  grid-column: 1/5;
+  background-color: #baa394;
 }
 
 html {
