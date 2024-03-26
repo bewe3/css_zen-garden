@@ -466,4 +466,64 @@ footer a:last-child {
   opacity: 0.2;
 }
 
-/*# sourceMappingURL=style.css.map */
+/***************************
+           About
+****************************/
+.explanation {
+  justify-content: right;
+}
+
+@media (max-width: 649px) {
+  .explanation::after {
+    content: url("https://placehold.co/400");
+    margin-left: 5%;
+  }
+}
+@media (min-width: 650px) {
+  .explanation {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-auto-rows: minmax(min-content, max-content);
+  }
+  .explanation::after {
+    content: url("https://placehold.co/400");
+    grid-row: 1/4;
+    grid-column: 2/3;
+    background-color: red;
+  }
+}
+/***************************
+      Participation
+****************************/
+@media (max-width: 649px) {
+  /*HELP: I don't know a good way to get the pseudo-element image
+  behind .participation*/
+  .participation::after {
+    content: url("https://placehold.co/400");
+  }
+  .participation h3 {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .participation > p {
+    display: list-item;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+@media (min-width: 650px) {
+  .participation {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: minmax(min-content, max-content);
+    align-items: start;
+  }
+  .participation::before {
+    content: url("https://placehold.co/400");
+    grid-row: 2/5;
+  }
+  .participation h3 {
+    grid-column: 1/3;
+  }
+}/*# sourceMappingURL=style.css.map */
