@@ -38,9 +38,8 @@ h6 {
   text-transform: uppercase;
   margin: 0;
   color: #080607;
-  margin-bottom: 1em;
-  padding: 0.5em 1em;
   font-size: clamp(1rem, 4vw, 4rem);
+  padding: 1rem 0;
   display: inline-block;
   color: #b2ae92;
 }
@@ -79,33 +78,20 @@ abbr {
   padding: 1em;
 }
 
-
-.design-selection {
-  display: flex;
-  flex-flow: column wrap;
-  border: 2px solid #080607;
-}
-
-.zen-resources {
-  display: flex;
-  flex-flow: column wrap;
-  border: 2px solid #080607;
-}
-
 .main.supporting div {
-  border-top: 0.25rem solid #11080b;
+  border-top: 0.25rem solid #080607;
 }
 
 .design-archives {
   display: flex;
   flex-flow: column wrap;
-  border: 2px solid #080607;
+  border-top: 0.25rem solid #080607;
 }
 
 footer {
   display: flex;
   flex-flow: row wrap;
-  border-top: 0.25rem solid #11080b;
+  border-top: 0.25rem solid #080607;
 }
 
 .preamble h3, .explanation h3 {
@@ -237,7 +223,7 @@ footer {
   padding: 0;
   width: 100%;
   align-items: center;
-  background-color: #11080b;
+  background-color: #080607;
   color: #b2ae92;
   font-family: "Fira Sans", sans-serif;
   display: grid;
@@ -264,7 +250,7 @@ footer a:last-child {
   padding: 0;
   width: 100%;
   align-items: center;
-  background-color: #11080b;
+  background-color: #080607;
   color: #b2ae92;
   font-family: "Fira Sans", sans-serif;
   text-align: center;
@@ -425,7 +411,7 @@ footer a:last-child {
     content: "";
     background: url("../images/forestLavaFlow.jpg") no-repeat center center;
     background-size: cover;
-    min-height: 600%;
+    min-height: 200%;
     margin: 1rem;
   }
   .preamble h3,
