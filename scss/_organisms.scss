@@ -362,5 +362,23 @@ footer a:last-child {
     background-color: #211a1e;
     border: solid black 1px;
     border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+
+    &::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('../images/moreRedLava.jpg') no-repeat center center / cover;
+      opacity: .8;
+      transition: opacity 1.5s ease;
+    }
+    &:hover::after{
+      opacity: .2;
+    }
   }
 }
