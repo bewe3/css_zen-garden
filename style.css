@@ -60,7 +60,7 @@ p {
   font-family: verdana, arial, sans-serif;
   font-size: 1em;
   line-height: 1.5em;
-  padding: 0.5em 0;
+  padding: 1.5em 1em;
   margin: 0;
   color: #b2ae92;
 }
@@ -440,42 +440,46 @@ footer a:last-child {
 /*************************
       Requirements
 *************************/
-.requirements {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  align-items: start;
-  gap: 1.5rem;
-  grid-template-columns: auto;
-  background: url("images/volcanoFlow.jpg") center no-repeat;
+@media (min-width: 649px) {
+  .requirements {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    align-items: start;
+    gap: 1.5rem;
+    grid-template-columns: auto;
+    background: url("images/volcanoFlow.jpg");
+    background-size: cover;
+    margin: 0 auto;
+    width: 95%;
+  }
+  .requirements p:not(:last-of-type) {
+    height: 100%;
+    text-align: center;
+    grid-row: 2;
+    background-color: #211a1e;
+    border: solid black 1px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+  }
+  .requirements p:not(:last-of-type)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("images/grayLavaField.jpg") no-repeat center center/cover;
+    opacity: 1;
+    z-index: 0;
+    transition: opacity 2s ease;
+  }
+  .requirements p:not(:last-of-type):hover::after {
+    opacity: 0;
+    animation: requirementFadeOut 3s ease;
+  }
 }
-.requirements p:not(:last-of-type) {
-  height: 100%;
-  text-align: center;
-  grid-row: 2;
-  background-color: #211a1e;
-  border: solid black 1px;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-  transition: background-color 0.5s ease;
-}
-.requirements p:not(:last-of-type)::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("images/grayLavaField.jpg") no-repeat center center/cover;
-  opacity: 1;
-  z-index: 0;
-  transition: opacity 2s ease;
-}
-.requirements p:not(:last-of-type):hover::after {
-  opacity: 0;
-  animation: requirementFadeOut 3s ease;
-}
-
 /***************************
            About
 ****************************/
