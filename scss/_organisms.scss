@@ -373,7 +373,7 @@ footer a:last-child {
       left: 0;
       right: 0;
       bottom: 0;
-      background: url('../images/grayLavaField.jpg') no-repeat center center / cover;
+      background: url($grayLavaField) no-repeat center center / cover;
       opacity: .8;
       transition: opacity 1.5s ease;
     }
