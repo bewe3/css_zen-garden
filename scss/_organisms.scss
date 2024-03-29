@@ -395,7 +395,7 @@ footer a:last-child {
   .explanation {
 
       &::after {
-          content: url($placeHolder400);
+          content: url($lavaFlow);
           margin-left: 5%; //this is hacky and I don't like it, I can't get it to center
       }
   }
@@ -408,10 +408,9 @@ footer a:last-child {
       grid-auto-rows: minmax(min-content, max-content);
 
       &::after {
-          content: url($placeHolder400);
+          content: url($littleRedLava);
           grid-row: 1/4;
           grid-column: 2/3;
-          background-color: red;
       }
   }
 }
@@ -433,7 +432,7 @@ behind .participation*/
       //position: absolute;
       
       &::after {
-          content: url($placeHolder400);
+          content: url($moreRedLava);
           //position: absolute;
           //top:0;
           //z-index: -1;
@@ -464,7 +463,7 @@ behind .participation*/
       align-items: start;
 
       &::before {
-          content: url($placeHolder400);
+          content: url($moreRedLava);
           grid-row: 2/5;
           
       }

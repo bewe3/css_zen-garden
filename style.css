@@ -475,7 +475,7 @@ footer a:last-child {
 
 @media (max-width: 649px) {
   .explanation::after {
-    content: url("https://placehold.co/400");
+    content: url("images/lavaFlow.jpg");
     margin-left: 5%;
   }
 }
@@ -486,10 +486,9 @@ footer a:last-child {
     grid-auto-rows: minmax(min-content, max-content);
   }
   .explanation::after {
-    content: url("https://placehold.co/400");
+    content: url("images/littleRedLava.jpg");
     grid-row: 1/4;
     grid-column: 2/3;
-    background-color: red;
   }
 }
 /***************************
@@ -499,7 +498,7 @@ footer a:last-child {
   /*HELP: I don't know a good way to get the pseudo-element image
   behind .participation*/
   .participation::after {
-    content: url("https://placehold.co/400");
+    content: url("images/moreRedLava.jpg");
   }
   .participation h3 {
     text-align: center;
@@ -520,7 +519,7 @@ footer a:last-child {
     align-items: start;
   }
   .participation::before {
-    content: url("https://placehold.co/400");
+    content: url("images/moreRedLava.jpg");
     grid-row: 2/5;
   }
   .participation h3 {
