@@ -79,6 +79,16 @@
   }
 }
 
+@keyframes requirementFadeOut {
+  from {
+    // opacity: 1;
+    z-index: 0;
+  }
+  to{
+    // opacity: 0;
+    z-index: -1;
+  }
+}
 
 
 
