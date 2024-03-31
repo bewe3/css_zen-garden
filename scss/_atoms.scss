@@ -1,5 +1,3 @@
-
-
 // mixins
 
 @mixin set-font($size: 1em, $line-height: normal, $font: $fonts-body) {
@@ -8,72 +6,138 @@
   line-height: $line-height;
 }
 
-@mixin set-flex($direction: row, $wrap: wrap){
+@mixin set-flex($direction: row, $wrap: wrap) {
   display: flex;
   flex-flow: $direction $wrap;
 }
 
-@mixin set-grid(){
+@mixin set-grid() {
   display: grid;
 }
 
-@mixin grid-rows($row-start, $row-end){
+@mixin grid-rows($row-start, $row-end) {
   grid-row-start: $row-start;
   grid-row-end: $row-end;
 }
 
-@mixin grid-columns($column-start, $column-end){
+@mixin grid-columns($column-start, $column-end) {
   grid-column-start: $column-start;
   grid-column-end: $column-end;
 }
 
-@mixin basicHs(){
-  font-family: $fonts-headline;
+@mixin basicHs() {
+  font-family: $serif-font;
+  text-transform: uppercase;
   margin: 0;
   color: $primary;
-  margin-bottom: 1em;
-  padding: .5em 1em;
-  display: inline-block
+  font-size: clamp(1rem, 4vw, 4rem);
+  padding: 1rem 0;
+  display: inline-block;
 }
 
-@mixin divider($color: $text-light){
+@mixin divider($color: $text-light) {
   border-top: 2px solid $color;
   margin-top: 1em;
   padding-top: 1.5em;
 }
 
-@mixin add-border($width: 2px, $style: solid, $color: $primary){
-  border: $width $style $color
+@mixin add-border($width: 0.25rem, $style: solid, $color: $primary) {
+  border-top: $width $style $color;
 }
 
-// Zen element styles.
 
-h1, h2, h3, h4, h5, h6{
-  @include basicHs();
-}
 
-h1{
-  font-size: 2em;
-  margin-bottom: -1em; 
-  padding-left: 0.7em;
-}
 
-  
-p {
-  @include set-font(1em, 1.5em);
-  padding: .5em 0;
-  margin: 0;
-}
 
-a {
-  color: $text-light;
-  text-decoration: none;
-  transition: border-color 0.2s ease-in-out;
-  &:hover{
+/***********************
+
+    keyframes
+
+************************/
+
+
+@keyframes lavaLink{
+  0%{
+    color: $accent2;
+    font-weight: bold;
+  }
+  33%{
+    font-weight: bold;
+    color: $accent1;
+  }
+  66%{
+    font-weight: bolder;
+    color: $accent2;
+  }
+  90%{
+    font-weight: bold;
+    color: $accent1;
+  }
+  100%{
+    font-weight: bolder;
     color: $accent2;
   }
 }
 
-abbr{
+@keyframes requirementFadeOut {
+  from {
+    // opacity: 1;
+    z-index: 0;
+  }
+  to{
+    // opacity: 0;
+    z-index: -1;
+  }
+}
+
+
+
+
+// Zen element styles.
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include basicHs();
+  color: $text-mid;
+
+}
+
+h1 {
+  font-size: 2em;
+}
+
+p {
+  @include set-font(1em, 1.5em);
+  padding: 1.5em 1em;
+  margin: 0;
+  color: $text-mid;
+}
+
+a {
+  color: $accent2;
+  text-decoration: none;
+  // transition: border-color 0.5s ease-in-out;
+  &:hover {
+    animation: lavaLink 4s linear infinite;
+  }
+}
+// a{
+//   color: $text-light;
+//   background: linear-gradient(to right, blue 50%, black 50%);
+//   background-clip: text;
+//   transition: background-position 1s;
+//   background-size: 200% 100%;
+//   background-position: -100% 0;
+//   &:hover{
+//     background-position: 0 0;
+//   }
+// }
+
+abbr {
   text-decoration: unset;
 }

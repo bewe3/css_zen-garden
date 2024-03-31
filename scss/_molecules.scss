@@ -1,39 +1,45 @@
-
-
-[role="banner"]{
-@include set-flex(column);
+[role='banner'] {
+  @include set-flex(column);
 }
 
-[role="article"]{
+[role='article'] {
   padding: 1em;
 }
 
+.main.supporting div {
+  @include add-border();
+}
 
-.design-selection{
+.design-archives {
   @include set-flex(column);
   @include add-border();
 }
 
-.zen-resources{
-  @include set-flex(column);
-  @include add-border();
-}
-
-.design-archives{
-  @include set-flex(column);
-  @include add-border();
-}
-
-footer{
+footer {
   @include set-flex();
   @include add-border();
 }
 
+.preamble h3, .explanation h3{
+  text-decoration: underline;
+}
 
-/************************
-   Road to Enlightenment
+/*************************
+      Requirements
 *************************/
 
-.preamble h3{
-  text-decoration: underline;
+
+.requirements {
+  & h3{
+    text-align: center;
+    grid-row: 1;
+    grid-column: 1/5;
+    font-size: 2rem;
+  }
+  & p:last-of-type{
+    grid-row: 3;
+    grid-column: 1 / 5;
+    background-color: $primary;
+  }
+
 }
