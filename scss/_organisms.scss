@@ -398,10 +398,15 @@ footer a:last-child {
 
 @media (max-width:649px) {
   .explanation {
-
+    
       &::after {
-          content: url($lavaFlow);
-          margin-left: 5%; //this is hacky and I don't like it, I can't get it to center
+        content: '';
+        display: block;
+        background: url($littleRedLava) 0 0 / cover;
+        padding-bottom: 200%;
+          /*content: '';
+          background-image: url($lavaFlow);
+          background-size: cover;*/
       }
   }
 }
@@ -434,13 +439,17 @@ behind .participation*/
   }
 
   .participation {
-      //position: absolute;
+      display: grid;
+      grid-auto-rows: minmax(min-content, max-content);
+      align-items: start;
       
       &::after {
-          content: url($moreRedLava);
-          //position: absolute;
-          //top:0;
-          //z-index: -1;
+        content: '';
+        display: block;
+        background: url($moreRedLava) 0 0 / cover;
+        padding-bottom: 200%;
+        grid-row: 2/5;
+        z-index: 2;
           
       }
       
@@ -451,6 +460,7 @@ behind .participation*/
       text-align: center;
       width: 100%;
       margin: 0 auto;
+      grid-row: 1/2;
   }
 
   .participation > p {
@@ -458,6 +468,16 @@ behind .participation*/
       margin-left: 3rem;
       margin-right: 3rem;
   }
+
+  /*.participation > p:nth-of-type(1) {
+    grid-row: 2/3;
+  }
+  .participation > p:nth-of-type(2) {
+    grid-row: 3/4;
+  }
+  .participation > p:nth-of-type(3) {
+    grid-row: 4/5;
+  }*/
 }
 
 @media (min-width: 650px) {
