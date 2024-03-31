@@ -113,6 +113,7 @@ h1 {
 
 p {
   @include set-font(1em, 1.5em);
+
   padding: 1.5em 1em;
   margin: 0;
   color: $text-mid;

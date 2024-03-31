@@ -119,6 +119,9 @@ footer {
   grid-row: 3;
   grid-column: 1/5;
   background-color: #080607;
+  margin-top: 3em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 html {
