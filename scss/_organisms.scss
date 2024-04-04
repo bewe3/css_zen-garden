@@ -399,11 +399,12 @@ footer a:last-child {
 @media (max-width:649px) {
   .explanation {
     
-      &::after {
+      &::before {
         content: '';
         display: block;
         background: url($littleRedLava) 0 0 / cover;
-        padding-bottom: 200%;
+        padding-bottom: 50%;
+        margin-bottom: 10%;
           /*content: '';
           background-image: url($lavaFlow);
           background-size: cover;*/
@@ -441,6 +442,7 @@ behind .participation*/
   .participation {
       display: grid;
       grid-auto-rows: minmax(min-content, max-content);
+      grid-template-columns: 1fr 1fr;
       align-items: start;
       
       &::after {
@@ -448,8 +450,9 @@ behind .participation*/
         display: block;
         background: url($moreRedLava) 0 0 / cover;
         padding-bottom: 200%;
-        grid-row: 2/5;
-        z-index: 2;
+        grid-area: 1/1/4/3;
+        z-index: 0;
+        opacity: 5%;
           
       }
       
@@ -460,7 +463,7 @@ behind .participation*/
       text-align: center;
       width: 100%;
       margin: 0 auto;
-      grid-row: 1/2;
+      grid-area: 1/1/2/3;
   }
 
   .participation > p {
@@ -469,15 +472,15 @@ behind .participation*/
       margin-right: 3rem;
   }
 
-  /*.participation > p:nth-of-type(1) {
-    grid-row: 2/3;
+  .participation > p:nth-of-type(1) {
+    grid-area: 2/1/3/3;
   }
   .participation > p:nth-of-type(2) {
-    grid-row: 3/4;
+    grid-area: 3/1/4/3;
   }
   .participation > p:nth-of-type(3) {
-    grid-row: 4/5;
-  }*/
+    grid-area: 4/1/5/3;
+  }
 }
 
 @media (min-width: 650px) {
