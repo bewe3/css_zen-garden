@@ -45,4 +45,11 @@ footer {
     padding-bottom: .5em;
   }
 
+  @media (max-width: 550px) {
+    background: url($fireLava);
+    p{
+      background-color: $primary; 
+    }
+  }
+
 }

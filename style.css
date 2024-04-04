@@ -123,6 +123,14 @@ footer {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
+@media (max-width: 550px) {
+  .requirements {
+    background: url("images/fireLava.jpg");
+  }
+  .requirements p {
+    background-color: #080607;
+  }
+}
 
 html {
   background-image: url("images/forestLavaFlow.jpg");
@@ -473,7 +481,7 @@ footer a:last-child {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url("images/grayLavaField.jpg") no-repeat center center/cover;
+    background: url("images/forestLavaFlow.jpg") no-repeat center center/cover;
     opacity: 1;
     z-index: 0;
     transition: opacity 2s ease;

@@ -307,6 +307,9 @@ footer a:last-child {
   white-space: nowrap;
 }
 
+
+
+
 /***************************
     Road to Enlightenment
 ****************************/
@@ -344,9 +347,13 @@ footer a:last-child {
 }
 
 
+
+
 /*************************
       Requirements
 *************************/
+
+
 @media (min-width: 649px) {
 .requirements {
   display: grid;
@@ -376,7 +383,7 @@ footer a:last-child {
       left: 0;
       right: 0;
       bottom: 0;
-      background: url($grayLavaField) no-repeat center center / cover;
+      background: url($forestLavaFlow) no-repeat center center / cover;
       opacity: 1;
       z-index: 0;
       transition: opacity 2s ease;
