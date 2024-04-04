@@ -528,7 +528,7 @@ footer a:last-child {
     display: block;
     background: url("images/moreRedLava.jpg") 0 0/cover;
     padding-bottom: 200%;
-    grid-area: 1/1/4/3;
+    grid-area: 1/1/5/3;
     z-index: 0;
     opacity: 5%;
   }
